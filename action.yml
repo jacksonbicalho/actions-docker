@@ -2,15 +2,15 @@
 name: 'Hello World'
 description: 'Greet someone and record the time'
 inputs:
-  who-to-greet:  # id of input
-    description: 'Who to greet'
+  dockerfile:  # id of input
+    description: 'Name of the Dockerfile (default: "github.workspace/Dockerfile")'
     required: true
-    default: 'World'
+    default: ${{ github.workspace }}    
 outputs:
-  time: # id of output
-    description: 'The time we greeted you'
+  dockerfile: # id of output
+    description: 'xxxxxxxxxxxxxxxxxx'
 runs:
   using: 'docker'
-  image: 'Dockerfile'
+  image: dockerfile
   args:
-    - ${{ inputs.who-to-greet }}
+    - ${{ inputs.dockerfile }}
