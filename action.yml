@@ -11,6 +11,6 @@ outputs:
     description: 'xxxxxxxxxxxxxxxxxx'
 runs:
   using: 'docker'
-  image: dockerfile
+  image: ${{ inputs.dockerfile }}
   args:
     - ${{ inputs.dockerfile }}
